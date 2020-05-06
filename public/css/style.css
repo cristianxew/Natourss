@@ -1322,3 +1322,236 @@ body {
   -webkit-transform: translateY(-2px);
   transform: translateY(-2px);
 }
+
+@media (max-width: 360px) {
+  body {
+    padding: 1rem;
+  }
+  .header {
+    flex-direction: column;
+    padding: 2rem;
+    height: auto;
+  }
+  .header__logo {
+    margin: 0.5rem 0 0;
+  }
+  .nav {
+    padding: 0.5rem;
+  }
+  .main {
+    padding: 0.5rem 0;
+  }
+  .heading-tertirary {
+    font-size: 1.4rem;
+  }
+  .card-container {
+    grid-template-columns: 1fr;
+    grid-gap: 3rem;
+  }
+  .footer {
+    padding: 2rem;
+  }
+  .footer__nav li {
+    margin-left: 0;
+  }
+  .section-description {
+    flex-direction: column;
+  }
+  .section-header {
+    height: 80vw;
+  }
+  .heading-primary {
+    font-size: 1.5rem;
+    line-height: 1.8;
+  }
+  .heading-box__group {
+    margin-top: 3rem;
+    display: -webkit-box;
+    width: 100%;
+  }
+  .heading-box {
+    bottom: 24vw;
+    left: 44%;
+    top: 37%;
+  }
+  .section-pictures {
+    display: block;
+  }
+  .picture-box__img--1 {
+    margin-bottom: 5%;
+  }
+  .picture-box__img--2 {
+    margin-bottom: 5%;
+    padding-bottom: 0;
+  }
+  .picture-box__img--3 {
+    margin-bottom: 5%;
+    padding-bottom: 5%;
+  }
+  .section-map {
+    height: 40rem;
+  }
+  .mapboxgl-popup-content {
+    font-size: 1rem;
+    padding: 0;
+  }
+  .section-cta {
+    padding: 2rem;
+    padding-bottom: 5rem;
+    padding-top: calc(5rem + var(--section-rotate));
+  }
+  .cta {
+    padding: 0;
+  }
+  .cta__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5rem 5rem 5rem;
+  }
+  .cta__img {
+    /* position: absolute;
+    left: 8rem;
+    top: 45rem; */
+    display: none;
+  }
+  .cta__text {
+    margin: 2rem 0;
+  }
+  .user-view {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .user-view__menu {
+    text-align: center;
+  }
+  .user-view__form-container {
+    max-width: 68rem;
+    margin: 0 auto;
+    padding: 0 4rem;
+  }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+  .header {
+    flex-direction: column;
+    padding: 2rem;
+    height: auto;
+  }
+  .header__logo {
+    margin: 0.5rem 0 0;
+  }
+  .nav {
+    padding: 0.5rem;
+  }
+  .main {
+    padding: 1rem 4rem;
+  }
+  .heading-tertirary {
+    font-size: 1.4rem;
+  }
+  .card-container {
+    grid-template-columns: 1fr;
+    grid-gap: 3rem;
+  }
+  .footer {
+    padding: 2rem;
+  }
+  .footer__nav li {
+    margin-left: 0;
+  }
+  .section-description {
+    flex-direction: column;
+  }
+  .section-header {
+    height: 55vw;
+  }
+  .heading-primary {
+    font-size: 3rem;
+    line-height: 1.8;
+  }
+  .heading-box__group {
+    margin-top: 3rem;
+    display: -webkit-box;
+    width: 100%;
+  }
+  .heading-box {
+    bottom: 24vw;
+    left: 44%;
+    top: 37%;
+  }
+  .section-pictures {
+    display: block;
+    padding: 3rem;
+  }
+  .picture-box__img--1 {
+    margin-bottom: 5%;
+  }
+  .picture-box__img--2 {
+    margin-bottom: 5%;
+    padding-bottom: 0;
+  }
+  .picture-box__img--3 {
+    margin-bottom: 5%;
+    padding-bottom: 5%;
+  }
+  .section-map {
+    height: 50rem;
+  }
+  .mapboxgl-popup-content {
+    font-size: 1rem;
+    padding: 0;
+  }
+  .section-cta {
+    padding: 2rem;
+    padding-bottom: 5rem;
+    padding-top: calc(5rem + var(--section-rotate));
+  }
+  .cta {
+    padding: 0;
+  }
+  .cta__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5rem 5rem 5rem;
+  }
+  .cta__img {
+    /* position: absolute;
+    left: 8rem;
+    top: 45rem; */
+    display: none;
+  }
+  .cta__text {
+    margin: 2rem 0;
+  }
+  .user-view {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .user-view__menu {
+    text-align: center;
+  }
+  .user-view__form-container {
+    max-width: 68rem;
+    margin: 0 auto;
+    padding: 0 8rem;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .card-container {
+    max-width: 120rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3rem;
+  }
+}

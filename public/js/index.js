@@ -21,14 +21,6 @@ if (mapBox) {
   displayMap(locations);
 }
 
-if (loginForm)
-  loginForm.addEventListener('submit', e => {
-    e.preventDefault();
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-    login(email, password);
-  });
-
 if (signUpForm)
   signUpForm.addEventListener('submit', e => {
     e.preventDefault();
@@ -36,7 +28,15 @@ if (signUpForm)
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
     const passwordConfirm = document.getElementById('confirm-password').value;
-    const user = signup(name, email, password, passwordConfirm);
+    signup(name, email, password, passwordConfirm);
+  });
+
+if (loginForm)
+  loginForm.addEventListener('submit', e => {
+    e.preventDefault();
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    login(email, password);
   });
 
 if (logOutBtn) logOutBtn.addEventListener('click', logout);

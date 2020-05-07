@@ -11,7 +11,7 @@ module.exports = class Email {
   }
 
   newTransport() {
-    if (process.env.NODE_ENV === 'production') {
+    /* if (process.env.NODE_ENV === 'production') {
       // Sendgrid
       return nodemailer.createTransport({
         service: 'SendGrid',
@@ -20,7 +20,7 @@ module.exports = class Email {
           pass: process.env.SENDGRID_PASSWORD
         }
       });
-    }
+    } */
 
     return nodemailer.createTransport({
       host: process.env.EMAIL_HOST,

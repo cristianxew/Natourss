@@ -1,0 +1,241 @@
+doctype html
+html
+    head
+        block head
+            meta(charset='UTF-8')
+            meta(name='viewport' content='width=device-width, initial-scale=1.0')
+            //link(rel='stylesheet' href='/css/style.css')
+            link(rel='stylesheet' href='/sass/main.css')
+            link(rel='shortcut icon' type='image/png' href='/img/favicon.png')
+            link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:300,300i,700')
+            title Natours | #{title}
+
+    body(data-alert=`${alert ? alert : ''}`)
+
+        .navigation
+            input#navi-toggle.navigation__checkbox(type='checkbox')
+            label.navigation__button(for='navi-toggle')
+                span.navigation__icon &nbsp;
+            .navigation__background &nbsp;
+            nav.navigation__nav
+                ul.navigation__list
+                    li.navigation__item
+                        a.navigation__link(href='/')
+                            span 01
+                            | Home
+                    li.navigation__item
+                        a.navigation__link(href='/alltours')
+                             span 02
+                             | All tours
+                    if user
+                        li.navigation__item
+                            a.navigation__link.nav__el--logout(href='#')
+                                span 03
+                                | Log out
+                        li.navigation__item
+                            a.navigation__link(href='/me')
+                              span 04
+                              | My profile
+                            #perfil
+                              img.nav__user-img(src=`/img/users/${user.photo}` alt=`Photo of ${user.name}`)
+                              p#foto= user.name
+                    else
+                        li.navigation__item
+                            a.navigation__link(href='/login')
+                                span 03
+                                | Login
+                        li.navigation__item
+                            a.navigation__link(href='/signup')
+                                span 04
+                                | Sign Up
+
+        header.header-m
+            .header-m__logo-box
+                img.header-m__logo(src='img/logo-white.png' alt='Logo')
+            .header-m__text-box
+                h1.heading-primarys
+                    span.heading-primarys--main Outdoors
+                    span.heading-primarys--sub is where life happens
+                a.btn.btn--white.btn--animated(href='/alltours') Discover our tours
+
+
+
+block content
+    main
+        section.section-about
+            .u-center-text.u-margin-bottom-big
+                h2.heading-secondary
+                    | Exciting tours for adventurous people
+            .row
+                .col-1-of-2
+                    h3.heading-tertiary.u-margin-bottom-small You&apos;re going to fall in love with nature
+                    p.paragraph
+                        | Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero repellat quis  consequatur
+                        | ducimus quam nisi exercitationem omnis earum qui.
+                    h3.heading-tertiary.u-margin-bottom-small Live adventures like you never have before
+                    p.paragraph
+                        | Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla deserunt voluptatum nam.
+                    a.btn-text(href='#') Learn more &rarr;
+                .col-1-of-2
+                    .composition
+                        img.composition__photo.composition__photo--p1(srcset='/img/nat-1.jpg 300w, /img/nat-1-large.jpg 1000w', sizes=' (max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px', alt='Photo 1', src='/img/nat-1-large.jpg')
+                        img.composition__photo.composition__photo--p2(srcset='/img/nat-2.jpg 300w, /img/nat-2-large.jpg 1000w', sizes=' (max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px', alt='Photo 2', src='/img/nat-2-large.jpg')
+                        img.composition__photo.composition__photo--p3(srcset='/img/nat-3.jpg 300w, /img/nat-3-large.jpg 1000w', sizes=' (max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px', alt='Photo 3', src='/img/nat-3-large.jpg')
+        section.section-features
+            .row
+                .col-1-of-4
+                    .feature-box
+                        i.feature-box__icon.icon-basic-world
+                        h3.heading-tertiary.u-margin-bottom-small Explore the world
+                        p.feature-box__text
+                            | Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.
+                .col-1-of-4
+                    .feature-box
+                        i.feature-box__icon.icon-basic-compass
+                        h3.heading-tertiary.u-margin-bottom-small Meet nature
+                        p.feature-box__text
+                            | Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.
+                .col-1-of-4
+                    .feature-box
+                        i.feature-box__icon.icon-basic-map
+                        h3.heading-tertiary.u-margin-bottom-small Find your way
+                        p.feature-box__text
+                            | Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.
+                .col-1-of-4
+                    .feature-box
+                        i.feature-box__icon.icon-basic-heart
+                        h3.heading-tertiary.u-margin-bottom-small Live a healthier life
+                        p.feature-box__text
+                            | Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.
+        section#section-tours.section-tours
+            .u-center-text.u-margin-bottom-big
+                h2.heading-secondary
+                    | Most popular tours
+            .row
+                .col-1-of-3
+                    .card-inicio
+                        .card-inicio__side.card-inicio__side--front
+                            .card-inicio__picture.card-inicio__picture--1
+                            h4.card-inicio__heading
+                                span.card-inicio__heading-span.card-inicio__heading-span--1 The Sea Explorer
+                            .card-inicio__details
+                                ul
+                                    li 3 day tours
+                                    li Up to 30 people
+                                    li 2 tour guides
+                                    li Sleep in cozy hotels
+                                    li Difficulty: easy
+                        .card-inicio__side.card-inicio__side--back.card-inicio__side--back-1
+                            .card-inicio__cta
+                                .card-inicio__price-box
+                                    p.card-inicio__price-only Only
+                                    p.card-inicio__price-value $497
+                                a.btn.btn--white(href='/alltours') Book now!
+                .col-1-of-3
+                    .card-inicio
+                        .card-inicio__side.card__side--front
+                            .card-inicio__picture.card-inicio__picture--2
+                            h4.card-inicio__heading
+                                span.card-inicio__heading-span.card-inicio__heading-span--2 The Forest Hiker
+                            .card-inicio__details
+                                ul
+                                    li 7 day tours
+                                    li Up to 40 people
+                                    li 6 tour guides
+                                    li Sleep in provided tents
+                                    li Difficulty: medium
+                        .card-inicio__side.card-inicio__side--back.card-inicio__side--back-2
+                            .card-inicio__cta
+                                .card-inicio__price-box
+                                    p.card-inicio__price-only Only
+                                    p.card-inicio__price-value $397
+                                a.btn.btn--white(href='/alltours') Book now!
+                .col-1-of-3
+                    .card-inicio
+                        .card-inicio__side.card-inicio__side--front
+                            .card-inicio__picture.card-inicio__picture--3
+                            h4.card-inicio__heading
+                                span.card-inicio__heading-span.card-inicio__heading-span--3 The Snow Adventurer
+                            .card-inicio__details
+                                ul
+                                    li 5 day tours
+                                    li Up to 15 people
+                                    li 3 tour guides
+                                    li Sleep in provided tents
+                                    li Difficulty: hard
+                        .card-inicio__side.card-inicio__side--back.card-inicio__side--back-3
+                            .card-inicio__cta
+                                .card-inicio__price-box
+                                    p.card-inicio__price-only Only
+                                    p.card-inicio__price-value $997
+                                a.btn.btn--white(href='/alltours') Book now!
+            .u-center-text.u-margin-top-huge
+                a.btn.btn--green(href='/alltours') Discover all tours
+        section.section-stories
+            .bg-video
+                video.bg-video__content(autoplay='', muted='', loop='')
+                    source(src='/img/video.mp4', type='video/mp4')
+                    source(src='/img/video.webm', type='video/webm')
+                    |                         Your browser is not supported!
+            .u-center-text.u-margin-bottom-big
+                h2.heading-secondary
+                    | We make people genuinely happy
+            .row
+                .story
+                    figure.story__shape
+                        img.story__img(src='/img/nat-8.jpg', alt='Person on a tour')
+                        figcaption.story__caption Mary Smith
+                    .story__text
+                        h3.heading-tertiary.u-margin-bottom-small I had the best week ever with my family
+                        p
+                            | Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero repellat   quis consequatur
+                            | ducimus quam nisi exercitationem omnis earum qui. Aperiam, ipsum sapiente aspernatur libero
+                            | repellat quis consequatur ducimus quam nisi exercitationem omnis earum qui.
+            .row
+                .story
+                    figure.story__shape
+                        img.story__img(src='/img/nat-9.jpg', alt='Person on a tour')
+                        figcaption.story__caption Jack Wilson
+                    .story__text
+                        h3.heading-tertiary.u-margin-bottom-small WOW! My life is completely different now
+                        p
+                            | Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero repellat   quis consequatur
+                            | ducimus quam nisi exercitationem omnis earum qui. Aperiam, ipsum sapiente aspernatur libero
+                            | repellat quis consequatur ducimus quam nisi exercitationem omnis earum qui.
+            .u-center-text.u-margin-top-huge
+                a.btn-text(href='#') Read all stories &rarr;
+        section.section-book
+            .row
+                .book
+                    .book__form
+                        form.form(action='#')
+                            .u-margin-bottom-medium
+                                h2.heading-secondary
+                                    | Start booking now
+                            .form__group
+                                input#name.form__input(type='text', placeholder='Full name', required='')
+                                label.form__label(for='name') Full name
+                            .form__group
+                                input#email.form__input(type='email', placeholder='Email address', required='')
+                                label.form__label(for='email') Email address
+                            .form__group.u-margin-bottom-medium
+                                .form__radio-group
+                                    input#small.form__radio-input(type='radio', name='size')
+                                    label.form__radio-label(for='small')
+                                        span.form__radio-button
+                                        |                                             Small tour group
+                                .form__radio-group
+                                    input#large.form__radio-input(type='radio', name='size')
+                                    label.form__radio-label(for='large')
+                                        span.form__radio-button
+                                    |                                              Large tour group
+                            .form__group
+                                button.btn.btn--green Next step &rarr;
+
+        include _footer
+
+        //- script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js')
+        //- script(src='/js/mapbox.js')
+        //- script(src='/js/login.js')
+        script(src='https://js.stripe.com/v3/')
+        script(src='/js/bundle.js')

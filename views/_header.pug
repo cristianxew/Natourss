@@ -1,14 +1,53 @@
-header.header
-  nav.nav.nav--tours
-    a.nav__el(href='/') All tours
-  .header__logo
-    img(src='/img/logo-white.png' alt='Natours logo')
-  nav.nav.nav--user
-    if user
-      a.nav__el.nav__el--logout Log out
-      a.nav__el(href='/me')
-        img.nav__user-img(src=`/img/users/${user.photo}` alt=`Photo of ${user.name}`)
-        span= user.name.split(' ')[0]
-    else
-      a.nav__el(href='/login') Log in
-      a.nav__el.nav__el--cta(href='/signup') Sign up
+
+.navigation
+  input#navi-toggle.navigation__checkbox(type='checkbox')
+  label.navigation__button(for='navi-toggle')
+    span.navigation__icon &nbsp;
+  .navigation__background &nbsp;
+  nav.navigation__nav
+    ul.navigation__list
+      li.navigation__item
+        a.navigation__link(href='/')
+          span 01
+          | Home
+      li.navigation__item
+        a.navigation__link(href='/alltours')
+          span 02
+          | All tours
+      if user
+        li.navigation__item
+          a.navigation__link.nav__el--logout(href='#')
+            span 03
+            | Log out
+        li.navigation__item
+          a.navigation__link(href='/me')
+            span 04
+            | My profile
+          #perfil
+            img.nav__user-img(src=`/img/users/${user.photo}` alt=`Photo of ${user.name}`)
+            p#foto= user.name
+      else
+        li.navigation__item
+          a.navigation__link(href='/login')
+            span 05
+            | Login
+        li.navigation__item
+          a.navigation__link(href='/signup')
+            span 06
+            | Sign Up
+
+//.nav-m
+//  nav.nav.nav--tours
+//    a.nav__el(href='/') Home
+//    a.nav__el(href='/alltours') All tours
+//  .header__logo
+//    img(src='/img/logo-white.png' alt='Natours logo')
+//  nav.nav.nav--user
+//    if user
+//      a.nav__el.nav__el--logout Log out
+//      a.nav__el(href='/me')
+//        img.nav__user-img(src=`/img/users/${user.photo}` alt=`Photo of ${user.name}`)
+//        span= user.name.split(' ')[0]
+//    else
+//      a.nav__el(href='/login') Log in
+//      a.nav__el.nav__el--cta(href='/signup') Sign up

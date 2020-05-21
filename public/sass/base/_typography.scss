@@ -1,7 +1,7 @@
 body {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
-  /*font-size: 16px;*/
+  font-size: 1.6rem;
   line-height: 1.7;
   color: $color-grey-dark;
 }
@@ -24,7 +24,7 @@ body {
 
     @include respond(phone) {
       letter-spacing: 1rem;
-      font-size: 3.5rem;
+      font-size: 5rem;
     }
     /*
         animation-delay: 3s;

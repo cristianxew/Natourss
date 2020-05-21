@@ -16,20 +16,22 @@
     height: 95vh;
   }
 
+  //if screen resolution is bigger than 192dpi or is a small screen will load the img /img/hero.jpg
+  //otherwise the default img img/hero-small.jpg
   @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
     only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
     only screen and (min-width: 125em) {
     background-image: linear-gradient(
         to right bottom,
         rgba($color-primary-light, 0.7),
-        rgba($color-primary-dark, 0.1)
+        rgba($color-primary-dark, 0.7)
       ),
       url(../img/hero.jpg);
   }
 
   @include respond(phone) {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 88vh, 0 100%);
   }
 
   &__logo-box {

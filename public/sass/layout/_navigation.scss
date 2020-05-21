@@ -32,14 +32,14 @@
     width: 6rem;
     border-radius: 50%;
     position: fixed;
-    top: 105rem;
+    top: 155rem;
     right: 55rem;
     background-image: radial-gradient(
       $color-primary-light,
       $color-primary-dark
     );
     z-index: 1000;
-    transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+    transition: transform 0.8s cubic-bezier(0.13, 0.46, 0.1, 0.73);
 
     @include respond(tab-port) {
       top: 100rem;
@@ -47,8 +47,8 @@
     }
 
     @include respond(phone) {
-      top: 90rem;
-      right: 12rem;
+      top: 105rem;
+      right: 20rem;
     }
   }
 
@@ -56,19 +56,19 @@
     height: 100vh;
     position: fixed;
     top: 0;
-    left: 0;
+    left: -50%;
     z-index: 1500;
 
     opacity: 0;
     width: 0;
-    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all 0.5s cubic-bezier(0.13, 0.46, 0.1, 0.73);
   }
 
   &__list {
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 100%;
+    transform: translate(-50%, -45%);
     list-style: none;
     text-align: center;
     width: 100%;
@@ -94,7 +94,7 @@
         transparent 50%,
         $color-white 50%
       );
-      background-size: 220%;
+      background-size: 225%;
       transition: all 0.4s;
 
       span {
@@ -176,8 +176,13 @@
 
 #perfil {
   position: absolute;
-  top: -50%;
-  left: 44%;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -90%);
+  list-style: none;
+  text-align: center;
+  width: 100%;
+  transition: all 0.5s cubic-bezier(0.13, 0.46, 0.1, 0.73);
   .nav__user-img {
     height: 10rem;
     width: 10rem;
@@ -192,9 +197,9 @@
     color: $color-white;
     text-transform: uppercase;
   }
-  @include respond(phone) {
+  /*  @include respond(phone) {
     top: -46%;
     left: 26%;
     margin-top: 2rem;
-  }
+  } */
 }
